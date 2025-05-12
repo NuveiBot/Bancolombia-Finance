@@ -1,0 +1,166 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Step_3_Logout" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Browser3" Type="InArgument(ui:UiElement)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>UiPath.CodedWorkflows</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="881.2,885.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Sucursal Virtual Empresas(2)" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,862.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="9308c9ed-2f29-4678-b928-bfb5a1cd8539" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,622.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Start Logout&quot;]" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="5" DisplayName="Click 'IMG _img15'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9308c9ed-2f29-4678-b928-bfb5a1cd8539" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="sucursalempresas.transaccionesbancolombia.com/SVE/control/AuthenticationTxBancolombia.login" CVScreenId="4ce8abef-5503-4283-9b25-86f0d0282f9b" CvElementArea="1475, 236, 52, 38" CvTextArea="1481, 248, 36, 12" CvTextArgument="SALIR" CvType="Button" DesignTimeRectangle="1476, 237, 50, 37" DesignTimeScaleFactor="1.375" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl name='MenuFrame' tag='FRAME' /&gt;&lt;webctrl id='MTbl15' tag='TABLE' /&gt;&lt;webctrl id='_img15' type='' tag='IMG' class='' aaname='' /&gt;" Guid="5e21aa98-cc29-488b-be18-e73807656ffc" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAAqCAYAAADmmJiOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAANLSURBVGhD7ZnZTipBEED9/x8BxQ3cFQFZgisiouwgCIJGFBUffKqbU0lP5g7BXDM+wNyZpKSnp7uqTi09EBfE49eCc8Jrlw84z9fLy4ssnJ+fixfFAry7uxO78DAej8v29vZcCr7/Bcgfu/BwZ2dHAoHAXAq++4A+4AyLD+gDzrhMAD4/P3sb8PHx0duAg8HAB5wncQ24srIiW1tbEovFVA4ODmRzc1OCwaC1ZnFxUfb392V3d1fW19et+eXlZdnY2FBhbNcbiUQsndgPh8Oyurqqesx8NBrVdaFQaMIvI64AgcBIoVCQh4cHlVarJblcTpaWlqw1QDWbTalWq5JMJi14AnNycqLC2K47nU5Lv98XzoRisaj7CB76me/1enJ/f697CajTN9eAZIXIVyoV6XQ6cnp6qnJ9fS1XV1cWIJHPZrPq6Ovrq0IawL29PV2LMLbrB6ZcLsvT05OcnZ1p9vllgC1sMtdoNKRer6t+p3+uAQHg5wg/qdiTyWTk6OhIEomEOmeHKJVKUqvVFBIHgWY/5UZAEMZ2/WQU22SLbFKK6G6321oh6GUflcE6p39TAf/1NUEGMXp7e6tGLy8v5eLiQp0h2gCwhtLCSZ4R8W63K6lUStbW1r4FJAgEjVIEjP7jk/0EjGdUA9lk7PRvKuBPX/TAEFEMj0YjGY/HOsZBeg/wr68vXUMvkUGizr6fAlIhb29v6qy58vm8Btrp11RAO9x3gJQgRilTnGON6RsyxuFD9ojw5+enHggIPfX+/i6Hh4c/BjQZRCcBI5g3NzcT/fsrgOaQodlx8Pj4WIWmxwmMkj3Kkv7DIdbi0MfHhx4MZIR7+piTGCCE/gMGkOFwqD6gjzlOUQ4zTk7aA3vYYY852H4VECcoayJtjm6cpsc4HXGCzJp3FbrMqQsMa3i9sJdeBhZw7DIPIKXNHFVBhdDDwACJfYJItTjfpa4AEcoUEPoJBxDWYohnzCMEw+wBlDU4hzAmM2Y/YwLHPPc4TvboM2yZsbHPWmyw/lczaIfEaYwj9m8VgDqjatbbhf4y+40O9pl7xuZUNmOjj7GxY//2ZMQ14KyLD+gDzrj4gD7gjIsP6APOuPx/gJ7/Dy83XhQLUEcevv4A5TnkaLu7BKkAAAAASUVORK5CYII=" InformativeScreenshot="bd30cb74679421d55cc44eecf2e9a3d4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sucursal Virtual Empresas' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="1388, 237, 88, 37" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl name='MenuFrame' tag='FRAME' /&gt;&lt;webctrl id='MTbl14' tag='TABLE' /&gt;&lt;webctrl id='_img14' type='' tag='IMG' class='' aaname='' /&gt;" Guid="95aeea40-86a6-465a-a6e7-9651c13eb628" SearchSteps="FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="416,159.2" sap2010:WorkflowViewState.IdRef="KillProcess_2" ProcessName="chrome" />
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1158" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT0SURBVHhe1Vs9bxtHEOVP0E9gFe3u3QWsErgzEFpuLTt1xNQWDLeSAQFsIncGYcqtIP0AE+4lGCnFhkhjloIAqibCP3DBO2qV09ze8WY/juQDHiDoTrvzdmd3ZvZWrVZgCCHaiRI9JXcHsdwdxUpOEiVvYyXTPB9+N1m+I/qJ/OkV/pa2txWIhXgOwSahXEZS3kZKnKNN2s9God1u78RCnMRKzakIX8RgKCF6G+UZTQgvUs0jKT+tfSAiKd83K/wptUdQu4IDIx9L8Z0atC5iIBrzhnXPegXn0e7ue2qvVyRSfjJ0vFkU4oTa7QWJUueFzjaUkVLn1H4nRFJOaCdbwAnVYYVtmnlKZ0+IlTqhjW4bkS9QXbWw3O2LDTbBve5v6bvDt+mH46PsZ/qcS3Z0yOJ84FD37Ndf0jev9zORlxcX6fXVVXo/m6UUi8W/2bv075mcs/IEJBaGRqwJAb2DP9KPp6fp6OtXo9AqnA2HhTbZlOI71WkEUsvCHzMJwXBhzOx0+oPqYQNeQPuw4cqlADexnX3MsC/BJqB92qcF5512e4fqfoRtpnd9fUXt9Q4MLu3XikL0qe4Mthvf3osutTUIPG2GoNkLXNb+YrGg9gbB76/3C31b0eQFtmsfHI9vqK1egQEej8eFfh04fyI+jsVzw0u1ifDmA1oo1vuH4+Nsxj25fZH5M8ZIiovCCwza7AN5se8OD9O9brfQblBKOcgNgL37a65KbiB4NBpl3tK4WAMjJW8z8cvdv/gCl5eXFwXBCI++BOv6AO1lS+ToqPAOl1l6nEj5ij6w4csX3cww8M+Dg8LzutRZpE6bkViVRRnXQVBK9Fr4CkMfNMV8jVBWDFUB0Ye2ySL2gUjJb4UHAQnBZ8PP6fjmpnRmOXCJEpGU33DoEfS4Cwai5MUM+xBM4VgpTlqxkneGB06EaLg1Zjk0XJZBFgnoL23ZpGgKlyjjPABY06Hcuy56DlHHagAw29jI1iUa/U6n08fEitrHIXsAPp7+1ahwWh+4uLuJrE0Q2Vho3N/fN5YyP2yC9cOgTdGzCrpGCDG7NThhJ0I+3B8u/eVs6JQy++BDIiQH9EEVbQ8/IBpubZu50WP12Wzm4YRI9Fu4wVV8UE5a9VXBVrSuEValzC5JEIhCsNVhlsM4vKgCjIV7c9eznuEqwSZwBzdPaF8eiTEiATo0AbPNWdO6RoBLcwRTICzTtusQV/geT4S4+wCSEEDPNs4C6DsmhkiXbZcBPvv/PwDMQ1EIRtiq434hROdh/b2AXry0+SiyijAMu3VocE+Gnrh/bgC8nwy92d+ntgYBtxhC5KP6W51OZ8e3F8ADXDa4Mjhmj/PH3Z8ihBfYJk556ILIS32Q/x5AEcILYLQNUBTpE2arTc5ArP3S2df42fPdIE4BpWsE51kuoXHtmxBH0us94Krjbtt0mUvjzl+GZXrsbyl8GQ7XIloziVT5xlcG30sBaW+TovPElT+qrxZipVgp8kbSdBmCg0RKp0/n6yRsp3qswDk22yD6uSytsU2e4G3mKUJkit5Zlen5wDI6+AuRvohQZ73bc4GY6uOfIj3yb3ac9wGklusciEZnvQwPWeMAxlADQ3HZl+obb3yuC8tlEdYjNlK4CThjRCjyNBh32NnRJu1nK5B5RoKbaKKffYaL1D8lx/B3eJa9I+UA3sT6Lw9L/Admgl4V9IATLwAAAABJRU5ErkJggg==" InformativeScreenshot="fe462808477267057a6649f887120212.jpg" Selector="&lt;html app='chrome.exe' title='Sucursal Virtual Empresas' /&gt;" Url="https://sucursalempresas.transaccionesbancolombia.com/SVE/control/AuthenticationTxBancolombia.login" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

@@ -1,0 +1,367 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Step_1_Get_Depositos" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="Browser" Type="InArgument(ui:UiElement)" />
+    <x:Property Name="Browser2" Type="OutArgument(ui:UiElement)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Platform.SyncObjects</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.Reflection</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Forms</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.CodeDom</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.Immutable</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.AccessControl</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.DriveInfo</AssemblyReference>
+      <AssemblyReference>System.IO.FileSystem.Watcher</AssemblyReference>
+      <AssemblyReference>System.IO.Packaging</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Linq.Parallel</AssemblyReference>
+      <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldCollapseAll">True</x:Boolean>
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence sap:VirtualizedContainerService.HintSize="881.2,1277.6" sap2010:WorkflowViewState.IdRef="Sequence_36">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Chrome Sucursal Virtual Empresas" HealingAgentBehavior="Job" sap:VirtualizedContainerService.HintSize="483.2,1254.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="11a359b6-cd79-49ae-b5bd-e33a10abd592" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="449.6,1014.4" sap2010:WorkflowViewState.IdRef="Sequence_35">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                <x:Boolean x:Key="IsPinned">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_20" Message="[&quot;Start Step 1 Get Depositos&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_21" Message="[&quot;Click on Consultas button&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'IMG _img0'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_53" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="11a359b6-cd79-49ae-b5bd-e33a10abd592" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="sucursalempresas.transaccionesbancolombia.com/SVE/control/AuthenticationTxBancolombia.login" CVScreenId="5f97104e-3911-4f74-a8f1-60d8af183eb7" ContentHash="ayHNMrRxuUG_Zj_aj64kqg" CvTextArea="12, 257, 70, 12" CvTextArgument="CONSULTAS" CvType="Text" DesignTimeRectangle="10, 246, 76, 37" DesignTimeScaleFactor="1.375" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl name='MenuFrame' tag='FRAME' /&gt;&lt;webctrl id='MTbl0' tag='TABLE' /&gt;&lt;webctrl id='_img0' type='' tag='IMG' class='' aaname='' /&gt;" Guid="8ffbea26-0768-4605-8208-6001a4b8c2f5" InformativeScreenshot="0981b48a6106aad7d734b30d908e9b05.png" Reference="2imDABQ7pEaqczXexoTMfw/vR3xl-PdYEqWGUSBuYe5dA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sucursal Virtual Empresas' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="5f97104e-3911-4f74-a8f1-60d8af183eb7" CvElementArea="86, 245, 78, 39" CvTextArea="90, 255, 68, 15" CvTextArgument="DEPÓSITOS" CvType="Button" DesignTimeRectangle="86, 246, 75, 37" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl name='MenuFrame' tag='FRAME' /&gt;&lt;webctrl id='MTbl1' tag='TABLE' /&gt;&lt;webctrl id='_img1' type='' tag='IMG' class='' aaname='' /&gt;" Guid="a585bfbc-7a87-48cf-98f7-cac2346cbb1d" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,84.8" sap2010:WorkflowViewState.IdRef="LogMessage_22" Message="[&quot;Click on Saldos Consolidados button&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,281.6" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" Shortcuts="[d(hk)][k(Tab)][u(hk)][d(hk)][k(Enter)][u(hk)]" Version="V4">
+              <uix:NKeyboardShortcuts.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NKeyboardShortcuts.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NKeyboardShortcuts>
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,84.8" sap2010:WorkflowViewState.IdRef="LogMessage_23" Message="[&quot;Click on the Depositos section&quot;]">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ui:LogMessage>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Depósitos(1)'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="416,84.8" sap2010:WorkflowViewState.IdRef="NClick_51" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="11a359b6-cd79-49ae-b5bd-e33a10abd592" Version="V4">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="sucursalempresas.transaccionesbancolombia.com/SVE/control/AuthenticationTxBancolombia.login" CVScreenId="947f5af2-1df8-4712-8bcb-4c03b11ee675" ContentHash="wzhl3lNZkEudZKpjFcChTQ" CvTextArea="44, 750, 65, 17" CvTextArgument="Depósitos" CvType="Text" DesignTimeRectangle="45, 749, 63, 16" DesignTimeScaleFactor="1.375" ElementType="Text" FuzzySelectorArgument="&lt;webctrl name='TransactionFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='acctLink' aaname='Depósitos' check:innerText='Depósitos' /&gt;" Guid="541cf3d6-e376-4aae-b698-58df1cb36df2" InformativeScreenshot="dd0855facc68dbd7e74b74663a17a281.png" Reference="2imDABQ7pEaqczXexoTMfw/KYEAmz1m8Eqqxd8kfKxdQA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sucursal Virtual Empresas' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="947f5af2-1df8-4712-8bcb-4c03b11ee675" CvTextArea="39, 699, 102, 21" CvTextArgument="Depósitos" CvType="Text" DesignTimeRectangle="40, 697, 1514, 22" ElementType="Text" FuzzySelectorArgument="&lt;webctrl name='TransactionFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='subTitulo' aaname='Depósitos' check:innerText='Depósitos' /&gt;" Guid="80516f6f-56c9-4aa8-837a-6a23324b7e19" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'Cuentas Depósitos'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="416,77.6" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="11a359b6-cd79-49ae-b5bd-e33a10abd592" Timeout="30" Version="V4">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="952,176" sap2010:WorkflowViewState.IdRef="LogMessage_24" Message="[&quot;Already Cuentas Depósitos Section&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'BANCOLOMBIA'" HealingAgentBehavior="SameAsCard" sap:VirtualizedContainerService.HintSize="952,225.6" sap2010:WorkflowViewState.IdRef="NClick_52" InteractionMode="DebuggerApi" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="11a359b6-cd79-49ae-b5bd-e33a10abd592" Version="V4">
+                    <uix:NClick.Target>
+                      <uix:TargetAnchorable BrowserURL="sucursalempresas.transaccionesbancolombia.com/SVE/control/AuthenticationTxBancolombia.login" CVScreenId="3adbe853-787a-496f-a9d7-0aacff8179f8" ContentHash="fIoFNxVwsEOkeGnZU-N82Q" DesignTimeRectangle="323, 639, 108, 17" DesignTimeScaleFactor="1.375" ElementType="Text" FuzzySelectorArgument="&lt;webctrl name='TransactionFrame' tag='FRAME' /&gt;&lt;webctrl id='Cuentas_Ahorro' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='acctlink' aaname='180-000096-36' /&gt;" Guid="a1518da3-db89-4636-ad50-0a8dd7eab8fc" InformativeScreenshot="aaf6d8f96cd41f83057513812ab8543b.png" Reference="2imDABQ7pEaqczXexoTMfw/8lHNQXNuNkeSkdNuZdmxzQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sucursal Virtual Empresas' /&gt;" SearchSteps="FuzzySelector" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="3adbe853-787a-496f-a9d7-0aacff8179f8" CvTextArea="135, 641, 106, 13" CvTextArgument="BANCOLOMBIA" CvType="Text" DesignTimeRectangle="130, 633, 186, 37" ElementType="Text" FuzzySelectorArgument="&lt;webctrl name='TransactionFrame' tag='FRAME' /&gt;&lt;webctrl id='Cuentas_Ahorro' tag='TABLE' /&gt;&lt;webctrl class='cell_izq' type='' tag='TD' aaname='BANCOLOMBIA' check:innerText='BANCOLOMBIA' /&gt;" Guid="d0ddc83a-84cb-49be-bbf3-aca24b6cdbbd" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NClick.Target>
+                    <uix:NClick.VerifyOptions>
+                      <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                        <uix:VerifyExecutionOptions.Retry>
+                          <InArgument x:TypeArguments="x:Boolean" />
+                        </uix:VerifyExecutionOptions.Retry>
+                        <uix:VerifyExecutionOptions.Timeout>
+                          <InArgument x:TypeArguments="x:Double" />
+                        </uix:VerifyExecutionOptions.Timeout>
+                      </uix:VerifyExecutionOptions>
+                    </uix:NClick.VerifyOptions>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NClick>
+                  <uix:NCheckState DisplayName="Check App State 'Movimientos del Día'" HealingAgentBehavior="Disabled" sap:VirtualizedContainerService.HintSize="952,513.6" sap2010:WorkflowViewState.IdRef="NCheckState_2" ScopeIdentifier="11a359b6-cd79-49ae-b5bd-e33a10abd592" Timeout="30" Version="V4">
+                    <uix:NCheckState.IfExists>
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,228" sap2010:WorkflowViewState.IdRef="Sequence_39">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_26" Message="[&quot; Already Movimientos del Día section&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfExists>
+                    <uix:NCheckState.IfNotExists>
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,230" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168" sap2010:WorkflowViewState.IdRef="LogMessage_27" Message="[&quot;Error Movimientos del Día section&quot;]" />
+                      </Sequence>
+                    </uix:NCheckState.IfNotExists>
+                    <uix:NCheckState.Target>
+                      <uix:TargetAnchorable BrowserURL="sucursalempresas.transaccionesbancolombia.com/SVE/control/AuthenticationTxBancolombia.login" CVScreenId="71630785-c573-45ef-8566-ae6d93dc2967" ContentHash="t6vptDC9sESLEpZuv8jESQ" CvTextArea="35, 435, 251, 22" CvTextArgument="Movimientos del Día" CvType="Text" DesignTimeRectangle="37, 405, 1097, 55" DesignTimeScaleFactor="1.375" ElementType="Text" FuzzySelectorArgument="&lt;webctrl name='TransactionFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='header_title' type='' tag='TD' aaname='Movimientos del Día' check:innerText='Movimientos del Día' /&gt;" Guid="6ed50beb-e14b-4fcb-b87c-d848aa79e1cb" InformativeScreenshot="0f2f993af8e40d89872e158c0ea2e5f6.png" Reference="2imDABQ7pEaqczXexoTMfw/fSt87DNX2UmD80Q2w2BhOQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sucursal Virtual Empresas' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                        <uix:TargetAnchorable.Anchors>
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                            <uix:Target CVScreenId="71630785-c573-45ef-8566-ae6d93dc2967" CvTextArea="43, 146, 169, 27" CvTextArgument="Bancolombia" CvType="Text" DesignTimeRectangle="9, 128, 206, 67" ElementType="Icon" FuzzySelectorArgument="&lt;webctrl name='MenuFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl id='logo_sve' type='' tag='IMG' class='' aaname='' /&gt;" Guid="1aa71343-322e-43fb-bc2c-27b37b1e393f" SearchSteps="FuzzySelector, CV" />
+                          </scg:List>
+                        </uix:TargetAnchorable.Anchors>
+                      </uix:TargetAnchorable>
+                    </uix:NCheckState.Target>
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </uix:NCheckState>
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,68.8" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_25" Message="[&quot;Error Cuentas Depósitos Section&quot;]">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </ui:LogMessage>
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="sucursalempresas.transaccionesbancolombia.com/SVE/control/AuthenticationTxBancolombia.login" CVScreenId="4962d066-6cfe-466c-a778-4a5ea4230ee5" ContentHash="Ci8cvMfL6UGsBjdTtSBk6w" CvTextArea="35, 435, 230, 26" CvTextArgument="Cuentas Depósitos" CvType="Text" DesignTimeRectangle="37, 405, 1071, 55" DesignTimeScaleFactor="1.375" ElementType="Text" FuzzySelectorArgument="&lt;webctrl name='TransactionFrame' tag='FRAME' /&gt;&lt;webctrl tag='TABLE' /&gt;&lt;webctrl class='header_title' type='' tag='TD' aaname='Cuentas Depósitos ' check:innerText='Cuentas Depósitos' /&gt;" Guid="2d3d4146-922c-4a0c-b008-fc062bb346aa" InformativeScreenshot="eb1134d6ece2628318c50ad5c5e9771b.png" Reference="2imDABQ7pEaqczXexoTMfw/OQf3xxnA4UGkl4-BmY6mAw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Sucursal Virtual Empresas' /&gt;" SearchSteps="FuzzySelector, CV" Version="V5" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target CVScreenId="4962d066-6cfe-466c-a778-4a5ea4230ee5" CvTextArea="35, 561, 203, 16" CvTextArgument="Cuentas de Ahorros" CvType="Text" DesignTimeRectangle="37, 558, 1866, 22" ElementType="Text" FuzzySelectorArgument="&lt;webctrl name='TransactionFrame' tag='FRAME' /&gt;&lt;webctrl parentname='forma' tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='subTitulo' aaname='Cuentas de Ahorros' check:innerText='Cuentas de Ahorros' /&gt;" Guid="fab1d973-42e6-4b3a-9d61-4b9aacd49bc1" SearchSteps="FuzzySelector, CV" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1158" BrowserType="Chrome" ContentHash="ICoSyh7iZUyoxn5uP5s9Qw" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAT0SURBVHhe1Vs9bxtHEOVP0E9gFe3u3QWsErgzEFpuLTt1xNQWDLeSAQFsIncGYcqtIP0AE+4lGCnFhkhjloIAqibCP3DBO2qV09ze8WY/juQDHiDoTrvzdmd3ZvZWrVZgCCHaiRI9JXcHsdwdxUpOEiVvYyXTPB9+N1m+I/qJ/OkV/pa2txWIhXgOwSahXEZS3kZKnKNN2s9God1u78RCnMRKzakIX8RgKCF6G+UZTQgvUs0jKT+tfSAiKd83K/wptUdQu4IDIx9L8Z0atC5iIBrzhnXPegXn0e7ue2qvVyRSfjJ0vFkU4oTa7QWJUueFzjaUkVLn1H4nRFJOaCdbwAnVYYVtmnlKZ0+IlTqhjW4bkS9QXbWw3O2LDTbBve5v6bvDt+mH46PsZ/qcS3Z0yOJ84FD37Ndf0jev9zORlxcX6fXVVXo/m6UUi8W/2bv075mcs/IEJBaGRqwJAb2DP9KPp6fp6OtXo9AqnA2HhTbZlOI71WkEUsvCHzMJwXBhzOx0+oPqYQNeQPuw4cqlADexnX3MsC/BJqB92qcF5512e4fqfoRtpnd9fUXt9Q4MLu3XikL0qe4Mthvf3osutTUIPG2GoNkLXNb+YrGg9gbB76/3C31b0eQFtmsfHI9vqK1egQEej8eFfh04fyI+jsVzw0u1ifDmA1oo1vuH4+Nsxj25fZH5M8ZIiovCCwza7AN5se8OD9O9brfQblBKOcgNgL37a65KbiB4NBpl3tK4WAMjJW8z8cvdv/gCl5eXFwXBCI++BOv6AO1lS+ToqPAOl1l6nEj5ij6w4csX3cww8M+Dg8LzutRZpE6bkViVRRnXQVBK9Fr4CkMfNMV8jVBWDFUB0Ye2ySL2gUjJb4UHAQnBZ8PP6fjmpnRmOXCJEpGU33DoEfS4Cwai5MUM+xBM4VgpTlqxkneGB06EaLg1Zjk0XJZBFgnoL23ZpGgKlyjjPABY06Hcuy56DlHHagAw29jI1iUa/U6n08fEitrHIXsAPp7+1ahwWh+4uLuJrE0Q2Vho3N/fN5YyP2yC9cOgTdGzCrpGCDG7NThhJ0I+3B8u/eVs6JQy++BDIiQH9EEVbQ8/IBpubZu50WP12Wzm4YRI9Fu4wVV8UE5a9VXBVrSuEValzC5JEIhCsNVhlsM4vKgCjIV7c9eznuEqwSZwBzdPaF8eiTEiATo0AbPNWdO6RoBLcwRTICzTtusQV/geT4S4+wCSEEDPNs4C6DsmhkiXbZcBPvv/PwDMQ1EIRtiq434hROdh/b2AXry0+SiyijAMu3VocE+Gnrh/bgC8nwy92d+ntgYBtxhC5KP6W51OZ8e3F8ADXDa4Mjhmj/PH3Z8ihBfYJk556ILIS32Q/x5AEcILYLQNUBTpE2arTc5ArP3S2df42fPdIE4BpWsE51kuoXHtmxBH0us94Krjbtt0mUvjzl+GZXrsbyl8GQ7XIloziVT5xlcG30sBaW+TovPElT+qrxZipVgp8kbSdBmCg0RKp0/n6yRsp3qswDk22yD6uSytsU2e4G3mKUJkit5Zlen5wDI6+AuRvohQZ73bc4GY6uOfIj3yb3ac9wGklusciEZnvQwPWeMAxlADQ3HZl+obb3yuC8tlEdYjNlK4CThjRCjyNBh32NnRJu1nK5B5RoKbaKKffYaL1D8lx/B3eJa9I+UA3sT6Lw9L/Admgl4V9IATLwAAAABJRU5ErkJggg==" sap2010:WorkflowViewState.IdRef="TargetApp_1" InformativeScreenshot="142ed5c70e82e7b07509c2833f96ed39.jpg" Reference="2imDABQ7pEaqczXexoTMfw/0xl1kkiN7USjZRGUNeQr4A" Selector="&lt;html app='chrome.exe' title='Sucursal Virtual Empresas' /&gt;" Url="https://sucursalempresas.transaccionesbancolombia.com/SVE/control/AuthenticationTxBancolombia.login" Version="V2" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsPinned">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
